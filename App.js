@@ -57,7 +57,7 @@ export default props => {
     setLoading(true);
   };
 
-  if(!fontsLoaded && !isLoadingComplete) {
+  if(!fontsLoaded || !isLoadingComplete) {
     return (
       <AppLoading
         startAsync={_loadResourcesAsync}
@@ -65,7 +65,7 @@ export default props => {
         onFinish={_handleFinishLoading}
       />
     );
-  } else if(fontsLoaded) {
+  } else {
     return (
       <NavigationContainer>
         <GalioProvider theme={argonTheme}>

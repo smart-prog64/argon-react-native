@@ -82,6 +82,7 @@ export default class Tabs extends React.Component {
             styles.menuTitle,
             { color: textColor }
           ]}
+          useNativeDriver={true}
           onPress={() => this.selectMenu(item.id)}>
           {item.title}
         </Animated.Text>
